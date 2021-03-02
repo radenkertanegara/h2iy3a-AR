@@ -7,25 +7,21 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
             <a-sound src="assets/musicbed.mp3" autoplay="true" loop></a-sound>
-            <a-assets>
-                <a-asset-item id="helmet" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/SciFiHelmet/glTF/SciFiHelmet.gltf"></a-asset-item>
-            </a-assets>
 
             <!-- handle hiro marker -->
             <a-marker preset="hiro">
                 <!-- raw.githack.com serves raw files directly from GitHub,
                 with proper Content-Type headers -->
                 <!-- first entity: reference to the above glTF model -->
-                <a-entity
+                 <a-entity
                 position="0 -1 0"
-                scale="0.5 0.5 0.5"
-                gltf-model="#helmet"
+                scale="20 20 20"
+                rotation="270 0 90"
+                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf"
+                sound="src:assets/musicbed.mp3; autoplay:true;"
                 >
                 </a-entity>
 
-                <!-- second entity: reference to the above audio -->
-                <a-sound src="assets/musicbed.mp3" autoplay="true">
-                </a-sound>
             </a-marker>
 
             <!-- add a camera to the scene that renders the objects for us -->
