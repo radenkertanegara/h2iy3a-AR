@@ -8,10 +8,9 @@
         <a-scene embedded arjs>
             <!-- handle hiro marker -->
             <a-marker preset='hiro'>
-                <a-sphere position='0 0.5 0' radius="0.45" material='opacity: 0.5; side: double;color:red;'>
-                    <!-- add a torus in a blue sphere --> 
-                    <a-text value="SmartCity" position='0 0.8 0'</a-text>
-                </a-sphere>
+                <a-sphere position='0 0.5 0' radius="0.45" material='opacity: 0.5; side: double;color:red;'></a-sphere>
+                <a-entity position='0 1.8 -1' text='value: SmartCity; color:"#FFC65D" scale:"120 120 120"></a-entity>
+            
             </a-marker>
 
             <!-- add a camera to the scene that renders the objects for us -->
