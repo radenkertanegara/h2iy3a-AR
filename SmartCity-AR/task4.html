@@ -6,28 +6,26 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
-            <!--handle music from assets -->
             <a-assets>
-                <audio id="avocado_sound" src="assets/musicbed.mp3" response-type="arraybuffer" autoplay="true" loop></audio>
-                <a-asset-item id="avocado" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf"></a-asset-item>
+                <audio id="helmet_sound" src="assets/helmet.mp3" response-type="arraybuffer" autoplay="true" loop></audio>
+                <a-asset-item id="helmet" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/SciFiHelmet/glTF/SciFiHelmet.gltf"></a-asset-item>
             </a-assets>
-
 
             <!-- handle hiro marker -->
             <a-marker preset="hiro">
                 <!-- raw.githack.com serves raw files directly from GitHub,
                 with proper Content-Type headers -->
+                <!-- first entity: reference to the above glTF model -->
                 <a-entity
                 position="0 -1 0"
-                scale="20 20 20"
-                rotation="270 0 90"
-                gltf-model="#avocado"
+                scale="0.5 0.5 0.5"
+                gltf-model="#helmet"
                 >
                 </a-entity>
 
-                <a-entity sound="src: #avocado_sound; volume: 2; loop: true">
+                <!-- second entity: reference to the above audio -->
+                <a-entity sound="src: #helmet_sound; volume: 1; loop: true">
                 </a-entity>
-
             </a-marker>
 
             <!-- add a camera to the scene that renders the objects for us -->
